@@ -1,0 +1,34 @@
+@baseUrl = http://localhost:5000
+
+
+### Hello (AppController)
+GET {{baseUrl}}/
+
+### Lấy tất cả user
+GET {{baseUrl}}/user/all
+
+### Lấy user lọc theo name
+GET {{baseUrl}}/user/all?name=tien
+
+### Lấy user lọc theo parm
+GET {{baseUrl}}/user/ab/99999
+
+### Tạo user
+POST {{baseUrl}}/user
+Content-Type: application/json
+
+{
+  "name": "Tien"
+}
+
+### Cập nhật user
+PUT {{baseUrl}}/user/1
+Content-Type: application/json
+
+{
+  "name": "Tien Updated"
+}
+
+### Xóa user
+DELETE {{baseUrl}}/user/1
+Content-Type: application/json
